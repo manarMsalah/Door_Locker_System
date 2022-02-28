@@ -19,10 +19,10 @@
 
 void I2C_init(void)
 {
-	/* The value of the bit rate register when the SCL frequency is 400 kbps, F_CPU is 8MHZ and pre-scaler is 1. */
+    /* The value of the bit rate register when the SCL frequency is 400 kbps, F_CPU is 8MHZ and pre-scaler is 1. */
     TWBR = 0x02;
-	TWSR = 0x00;
-	/* Address for this MC in case it is a slave device. */
+    TWSR = 0x00;
+    /* Address for this MC in case it is a slave device. */
     TWAR = 0xF0;
     /* Enable I2C module */
     TWCR = (1<<TWEN);
